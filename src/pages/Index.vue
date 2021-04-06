@@ -4,6 +4,7 @@
       alt="Quasar logo"
       src="~assets/quasar-logo-full.svg"
     >
+    teste
   </q-page>
 </template>
 
