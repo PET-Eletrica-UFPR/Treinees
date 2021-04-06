@@ -1,31 +1,3 @@
-<!--<template>
- <q-page class="q-ma-sm">
-   <div v-if="page=='Inicio'">
-     <p>teste</p>
-   </div>
-    <div v-else-if="page=='Meus Dados'">
-      <div>
-       <q-input v-model="Perfil.Nome"  type="text" label="Nome" />
-       <q-input v-model="Perfil.GRR" type="text" label="GRR"/>
-     </div>
-    </div>
-    <div v-else-if="page=='Meus Certificados'">
-      <q-list>
-        <q-item>
-        Vuex
-        </q-item>
-        <q-item>
-        Axios
-      </q-item>
-      </q-list>
-    </div>
-    <div v-else-if="page=='Configurações'" class="columns">
-      <div>
-        teste
-      </div>
-    </div>
-  </q-page>
-</template>-->
 <template v-slot:after>
         <q-tab-panels
           v-model="tab"
@@ -69,10 +41,15 @@ export default {
       page:"Perfil"
      }
   },
-   computed: {
-    page () {
-      return this.$store.getters.getPage
-    },
+  computed: {
+    tab () {
+      return this.$store.getters.getTab
+    }
+  },
+  methods: {
+    mudarTab (tab) {
+      this.$store.commit('setTab', tab)
+    }
   }
 }
 </script>
