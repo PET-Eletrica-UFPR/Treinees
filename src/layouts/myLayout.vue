@@ -7,7 +7,7 @@
           <q-toolbar-title>PET-EVENT</q-toolbar-title>
         </q-toolbar>
       </q-header>
-      <q-drawer v-model="drawer" show-if-above :width="200">
+      <q-drawer v-model="drawer" show-if-above :width="900">
         <q-scroll-area class="fit">
           <div>
             <q-splitter
