@@ -1,3 +1,4 @@
+
 <template v-slot:after>
         <q-tab-panels
           v-model="tab"
@@ -22,7 +23,11 @@
 
           <q-tab-panel name="Meus_certificados">
             <div class="text-h4 q-mb-md">Meus Certificados</div>
-            <p>Lorem entium cumque magnam bero.</p>
+            <q-list>
+              <q-item>
+                <p>Lorem entium cumque magnam bero.</p>
+              </q-item>
+            </q-list>
           </q-tab-panel>
 
           <q-tab-panel name="Configuracoes">
@@ -41,15 +46,10 @@ export default {
       page:"Perfil"
      }
   },
-  computed: {
-    tab () {
-      return this.$store.getters.getTab
-    }
-  },
-  methods: {
-    mudarTab (tab) {
-      this.$store.commit('setTab', tab)
-    }
+   computed: {
+    page () {
+      return this.$store.getters.getPage
+    },
   }
 }
 </script>
