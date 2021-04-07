@@ -47,11 +47,16 @@ export default {
      }
   },
    computed: {
-    page () {
-      return this.$store.getters.getPage
-    },
+    tab () {
+      return this.$store.getters.getTab
+    }
+  },
+  methods: {
+    mudarTab (tab) {
+      this.$store.commit('setTab', tab)
+    }
   }
-}
+} 
 </script>
 
 <style scoped>
