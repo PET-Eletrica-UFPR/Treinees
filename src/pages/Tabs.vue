@@ -18,6 +18,7 @@
             <div>
             <q-input v-model="Perfil.Nome"  type="text" label="Nome" />
             <q-input v-model="Perfil.GRR" type="text" label="GRR"/>
+            <q-btn label="Salvar"/>
           </div>
          </q-tab-panel>
 
@@ -41,6 +42,7 @@
 /* eslint-disable */
 export default {
   data() {
+   
     return {
       Perfil:{Nome:"", GRR:""},
       page:"Perfil"
